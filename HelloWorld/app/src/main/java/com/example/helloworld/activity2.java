@@ -7,26 +7,26 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class HelloWorldActivity extends AppCompatActivity {
+public class activity2 extends AppCompatActivity {
 
-    private static final String TAG = "HelloWorldActivity";
+    private static final String TAG = "activity2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTitle("I am activity1");
+        setTitle("I am activity2");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.hello_world_layout);
-        Button Hello1=(Button)findViewById((R.id.Hello1));
-        Hello1.setOnClickListener(new View.OnClickListener(){
+        setContentView(R.layout.activity_2);
+        Button Hello2=(Button)findViewById((R.id.Hello2));
+        Hello2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HelloWorldActivity.this, activity2.class);
+                Intent intent = new Intent(activity2.this, HelloWorldActivity.class);
                 startActivity(intent);
             }
         });
+
         Log.d(TAG, "onCreate execute");
     }
-
     @Override
     protected void onStart() {
         super.onStart();
