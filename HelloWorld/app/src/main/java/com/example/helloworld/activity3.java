@@ -7,44 +7,43 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-public class HelloWorldActivity extends AppCompatActivity {
-
-    private static final String TAG = "HelloWorldActivity";
+public class activity3 extends AppCompatActivity {
+    private static final String TAG = "activity3";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTitle("I am activity1");
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.hello_world_layout);
+        setContentView(R.layout.activity_3);
+        setTitle("activity3");
+        Button Hello3=(Button)findViewById((R.id.Hello3));
+        Hello3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity3.this, activity3.class);
+                startActivity(intent);
+            }
+        });
+
         Button Hello1=(Button)findViewById((R.id.Hello1));
         Hello1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HelloWorldActivity.this, HelloWorldActivity.class);
+                Intent intent = new Intent(activity3.this, HelloWorldActivity.class);
                 startActivity(intent);
             }
         });
 
-        Button Hello2=(Button )findViewById((R.id.Hello2));
-        Hello2.setOnClickListener(new View.OnClickListener() {
+        Button Hello2=(Button)findViewById((R.id.Hello2));
+        Hello2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HelloWorldActivity.this, activity2.class);
+                Intent intent = new Intent(activity3.this, activity2.class);
                 startActivity(intent);
             }
         });
 
-        Button Hello3=(Button )findViewById((R.id.Hello3));
-        Hello3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HelloWorldActivity.this, activity3.class);
-                startActivity(intent);
-            }
-        });
         Log.d(TAG, "onCreate execute");
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -81,3 +80,5 @@ public class HelloWorldActivity extends AppCompatActivity {
         Log.d(TAG, "onDestroy");
     }
 }
+
+

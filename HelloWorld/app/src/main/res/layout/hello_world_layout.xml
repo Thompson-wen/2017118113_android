@@ -20,13 +20,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="toHello2" />
+            android:text="toHello1" />
 
         <Button
             android:id="@+id/Hello2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="toHello1" />
+            android:text="toHello2" />
+
+        <Button
+            android:id="@+id/Hello3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="toHello3" />
     </LinearLayout>
 </RelativeLayout>

@@ -12,7 +12,7 @@ public class activity2 extends AppCompatActivity {
     private static final String TAG = "activity2";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+   protected void onCreate(Bundle savedInstanceState) {
         setTitle("I am activity2");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
@@ -20,11 +20,28 @@ public class activity2 extends AppCompatActivity {
         Hello2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(activity2.this, HelloWorldActivity.class);
+                    Intent intent = new Intent(activity2.this, activity2.class);
                 startActivity(intent);
             }
         });
 
+        Button Hello3=(Button)findViewById((R.id.Hello3));
+        Hello3.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity2.this,activity3.class);
+                startActivity(intent);
+            }
+        });
+
+        Button Hello1=(Button)findViewById((R.id.Hello1));
+        Hello1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity2.this, HelloWorldActivity.class);
+                startActivity(intent);
+            }
+        });
         Log.d(TAG, "onCreate execute");
     }
     @Override
@@ -37,6 +54,12 @@ public class activity2 extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "onResume");
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        Log.d(TAG, "onPostResume");
     }
 
     @Override
