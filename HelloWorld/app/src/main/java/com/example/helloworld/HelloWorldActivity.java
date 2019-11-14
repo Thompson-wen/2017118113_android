@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.net.Uri;
 
 public class HelloWorldActivity extends AppCompatActivity {
 
@@ -29,7 +30,8 @@ public class HelloWorldActivity extends AppCompatActivity {
         Hello2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HelloWorldActivity.this, activity2.class);
+                Intent intent=new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://www.hstc.edu.cn"));
                 startActivity(intent);
             }
         });
