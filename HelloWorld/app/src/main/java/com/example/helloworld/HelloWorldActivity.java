@@ -30,8 +30,8 @@ public class HelloWorldActivity extends AppCompatActivity {
         Hello2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:10086"));
+                Intent intent=new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("geo:"));
                 startActivity(intent);
             }
         });
