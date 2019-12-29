@@ -25,3 +25,4 @@ public class ExampleInstrumentedTest {
         assertEquals("com.example.androidthreadtest", appContext.getPackageName());
     }
 }
+/*huangyanwen*/
